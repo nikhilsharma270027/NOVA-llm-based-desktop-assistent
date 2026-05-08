@@ -1,0 +1,9 @@
+{
+    "name": "nova.native.host",
+    "description": "Nova Assistant Native Messaging Host",
+    "path": "ZYRON_HOST_PATH",
+    "type": "stdio",
+    "allowed_extensions": [
+        "nova@assistant.local"
+    ]
+}

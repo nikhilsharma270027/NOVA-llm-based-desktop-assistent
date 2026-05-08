@@ -1,0 +1,35 @@
+# Secrets (User tokens)
+.env
+.env.local
+.env.*.local
+*.env
+
+
+# Python junk
+__pycache__/
+*.png
+
+# Generated Native Host Files (Machine Specific)
+src/nova/core/zyron_native_host.json
+zyron_host.bat
+
+# Virtual Environment (Too big to upload)
+venv/
+env/
+
+# User Data (Don't upload your memory or photos)
+blacklist.json
+long_term_memory.json
+clipboard_history.json
+file_activity_log.json
+audio_recording.wav
+*.jpg
+*.png
+*.zip
+*.xpi
+
+# Local Agent Data (Machine-specific)
+.agents/
+
+# Generated Media (Don't upload screenshots/recordings)
+saved_media/

@@ -1,0 +1,53 @@
+{
+    "manifest_version": 3,
+    "name": "NOVA Activity Monitor",
+    "version": "1.5.1",
+    "description": "Monitors browser tabs for NOVA Desktop Assistant",
+    "permissions": [
+        "tabs",
+        "nativeMessaging",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_agent.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "nova@assistant.local",
+            "strict_min_version": "140.0",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

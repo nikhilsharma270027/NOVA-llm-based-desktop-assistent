@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nova-assistant"
+version = "1.5.1"
+description = "Your Intelligent Desktop Companion - 100% Local, 100% Private"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Surajkumar5050", email = "surajkumarsyn479@gmail.com" },
+]
+maintainers = [
+    { name = "ThaRealJozef", email = "yjrhider@gmail.com" },
+]
+keywords = ["assistant", "ai", "automation", "local", "privacy", "ollama"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = [
+    "SpeechRecognition",
+    "pyttsx3",
+    "pyaudio",  # Optional but good to keep for legacy online mode
+    "pillow",
+    "textblob",
+    "requests",
+    "python-telegram-bot",
+    "psutil",
+    "pywin32", #comment this line to install on Linux
+    "pyautogui",
+    "opencv-python",
+    "wmi",
+    "comtypes",
+    "ollama",
+    "vosk",
+    "sounddevice",
+    "python-dotenv",
+    "screen-brightness-control",
+    "scipy",
+    "idna",
+    "numpy",
+    "pyperclip",
+    "pydantic-settings>=2.0.0",
+    "pycaw",
+]
+
+[project.scripts]
+nova = "nova.main:main"
+nova-linux = "zyron_linux.main:main"
+
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nova", "src/zyron_linux"]
