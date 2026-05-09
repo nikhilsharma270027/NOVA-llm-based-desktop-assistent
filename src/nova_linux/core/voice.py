@@ -23,7 +23,7 @@ import os
 OFFLINE_MODE = os.getenv("OFFLINE_MODE", "false").lower() == "true"
 
 # We accept variations because Google sometimes mishears "Pikachu"
-WAKE_WORDS = ["pikachu", "pika", "peek a", "pick a", "picacho", "hey you"]
+WAKE_WORDS = ["nova", "hey you"]
 
 def speak(text):
     print(f"⚡ Nova: {text}")
@@ -48,7 +48,7 @@ def listen_for_command():
 
     # Fallback: Online Google Speech Recognition (Legacy)
     with sr.Microphone() as source:
-        print("\n👂 Listening for 'Hey Pikachu' (Online)...", end="", flush=True)
+        print("\n👂 Listening for 'Hey nova' (Online)...", end="", flush=True)
         
         # Fast adjustment to avoid blocking you
         recognizer.adjust_for_ambient_noise(source, duration=0.2)

@@ -148,6 +148,7 @@ def process_command(user_input):
             keep_alive=0 
         )
         content = response['message']['content']
+        print(" json response ",content)
         
         
         if "```" in content:

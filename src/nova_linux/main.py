@@ -7,7 +7,7 @@ from .agents.system import execute_command
 # import nova.features.files.tracker as file_tracker
 
 def main():
-    print("⚡ Nova ONLINE: Say 'Hey Pikachu' to start...")
+    print("⚡ Nova ONLINE: Say 'Hey NOVA' to start...")
     
     while True:
     

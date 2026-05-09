@@ -746,10 +746,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         loop = asyncio.get_running_loop()
         try:
             # Use AI to process command - now returns list
-            # Add 15-second timeout to prevent hanging
+            # Increased timeout to 45 seconds for slower LLM responses
             command_list = await asyncio.wait_for(
                 loop.run_in_executor(None, process_command, user_text),
-                timeout=15.0
+                timeout=45.0
             )
         except asyncio.TimeoutError:
             # If AI takes too long, send timeout error

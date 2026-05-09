@@ -18,9 +18,7 @@ class WakeWordEngine:
         
         # Wake words to listen for (lower case)
         self.wake_words = [
-            "pikachu", "pika", "hey pikachu", "hey you", 
-            "he got true", "gotcha", "got you", 
-            "be got to", "because to", "he got you"
+            "nova", "hey nova"
         ]
         print("✅ Offline Wake Word Engine Ready.")
 
@@ -40,7 +38,7 @@ class WakeWordEngine:
         Blocks until a wake word is detected.
         Returns the detected wake word.
         """
-        print("\n👂 Waiting for 'Pikachu' (Offline)...")
+        print("\n👂 Waiting for 'Nova' (Offline)...")
         
         with sd.RawInputStream(samplerate=16000, blocksize=8000, dtype='int16',
                                 channels=1, callback=self._callback):

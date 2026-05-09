@@ -16,7 +16,7 @@ def main():
     print_status("✅", "Voice Engine Ready (Offline/Online)", Colors.GREEN)
     print_status("👁️", "Clipboard Monitor Active", Colors.GREEN)
     print_status("📁", "File Tracker Active", Colors.GREEN)
-    print_status("👂", "Say 'Hey Pikachu' to start...", Colors.CYAN)
+    print_status("👂", "Say 'Hey NOVA' to start...", Colors.CYAN)
     
     while True:
         if listen_for_command():
@@ -52,7 +52,7 @@ def main():
                     speak("I'm sorry, my brain had a glitch.")
             
             time.sleep(1)
-            print_status("👂", "Waiting for Pikachu...", Colors.CYAN)
+            print_status("👂", "Waiting for NOVA...", Colors.CYAN)
 
 if __name__ == "__main__":
     try:

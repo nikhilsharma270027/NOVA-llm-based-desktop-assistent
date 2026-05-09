@@ -17,7 +17,7 @@ class WakeWordEngine:
         self.audio_queue = queue.Queue()
         
         # Wake words to listen for (lower case)
-        self.wake_words = ["pikachu", "pika", "hey pikachu"]
+        self.wake_words = ["nova"]
         print("✅ Offline Wake Word Engine Ready.")
 
     def _callback(self, indata, frames, time, status):
@@ -31,7 +31,7 @@ class WakeWordEngine:
         Blocks until a wake word is detected.
         Returns the detected wake word.
         """
-        print("\n👂 Waiting for 'Pikachu' (Offline)...")
+        print("\n👂 Waiting for 'Nova' (Offline)...")
         
         with sd.RawInputStream(samplerate=16000, blocksize=8000, dtype='int16',
                                channels=1, callback=self._callback):
